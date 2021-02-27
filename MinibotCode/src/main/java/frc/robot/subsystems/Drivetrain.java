@@ -43,7 +43,7 @@ public class Drivetrain extends SubsystemBase {
   }
 
   public void arcadeDrive(double xaxisSpeed, double zaxisRotate) {
-    m_diffDrive.arcadeDrive(xaxisSpeed, zaxisRotate);
+    m_diffDrive.arcadeDrive(xaxisSpeed, zaxisRotate, true);
   }
 
   public void resetEncoders() {
@@ -133,5 +133,9 @@ public class Drivetrain extends SubsystemBase {
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
+  }
+
+  public void arcadeDrive(Double double1, Double double2, boolean b) {
+    m_diffDrive.arcadeDrive(double1, double2, b);
   }
 }
